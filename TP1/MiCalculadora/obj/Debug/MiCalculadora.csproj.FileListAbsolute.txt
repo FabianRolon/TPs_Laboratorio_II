@@ -1,0 +1,13 @@
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\bin\Debug\Entidades.dll
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\bin\Debug\Entidades.pdb
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP1\MiCalculadora\obj\Debug\MiCalculadora.pdb
