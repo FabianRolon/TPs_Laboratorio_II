@@ -17,3 +17,9 @@ C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP2\TP-02 - Alumno\TP-
 C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP2\TP-02 - Alumno\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP2\TP-02 - Alumno\TP-02\Entidades\obj\Debug\Entidades.dll
 C:\Users\alnil\OneDrive\Documentos\practicaProgramacionII\TP2\TP-02 - Alumno\TP-02\Entidades\obj\Debug\Entidades.pdb
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\TP2\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\TP2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\TP2\Entidades\obj\Debug\Entidades.dll
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\TP2\Entidades\obj\Debug\Entidades.pdb
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\TP2\Entidades\bin\Debug\Entidades.dll
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\TP2\Entidades\bin\Debug\Entidades.pdb
