@@ -1,0 +1,7 @@
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\VistaConsola\bin\Debug\VistaConsola.exe.config
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\VistaConsola\bin\Debug\VistaConsola.exe
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\VistaConsola\bin\Debug\VistaConsola.pdb
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\VistaConsola\obj\Debug\VistaConsola.csprojAssemblyReference.cache
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\VistaConsola\obj\Debug\VistaConsola.csproj.CoreCompileInputs.cache
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\VistaConsola\obj\Debug\VistaConsola.exe
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\VistaConsola\obj\Debug\VistaConsola.pdb
