@@ -118,6 +118,50 @@ namespace Clases_Instanciables
             }
             throw new SinProfesorException();
         }
+        public static Universidad operator +(Universidad g, Eclase clase)
+        {
+            Profesor profesor = null;
+            foreach (Profesor profe in g.Instructores)
+            {
+                if(profe == clase)
+                {
+                    profesor = profe;
+                    break;
+                }
+            }
+            Jornada jornada = new Jornada(clase, profesor);
+            
+            foreach (Alumno alumno in g.Alumnos)
+            {
+                if(alumno == clase)
+                {
+                    jornada.Alumnos.Add(alumno);
+                }
+            }
+            g.Jornadas.Add(jornada);
+            return g;
+        }
+
+        public static Universidad operator +(Universidad g, Profesor i)
+        {
+            foreach (Profesor profesor in g.Instructores)
+            {
+                if (profesor == i)
+                    return g;
+            }
+            g.Instructores.Add(i);
+            return g;
+        }
+        public static Universidad operator +(Universidad g, Alumno a)
+        {
+            foreach (Alumno alumno in g.Alumnos)
+            {
+                if (alumno == a)
+                    return g;
+            }
+            g.Alumnos.Add(a);
+            return g;
+        }
 
         #endregion
     }
