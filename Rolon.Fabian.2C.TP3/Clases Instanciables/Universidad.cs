@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Archivos;
 using Excepciones;
 
 namespace Clases_Instanciables
@@ -22,7 +24,9 @@ namespace Clases_Instanciables
         private List<Jornada> jornada;
         public Universidad()
         {
-
+            this.alumnos = new List<Alumno>();
+            this.profesores = new List<Profesor>();
+            this.jornada = new List<Jornada>();
         }
         #region Propiedades e Indexador
         public List<Alumno> Alumnos
@@ -103,7 +107,7 @@ namespace Clases_Instanciables
         {
             return !(g == i);
         }
-        public static Profesor operator ==(Universidad g, Universidad.EClases clase)
+        public static Profesor operator ==(Universidad g, EClases clase)
         {
             foreach (Profesor profe in g.Instructores)
             {
@@ -114,7 +118,7 @@ namespace Clases_Instanciables
             }
             throw new SinProfesorException();
         }
-        public static Profesor operator !=(Universidad g, Universidad.EClases clase)
+        public static Profesor operator !=(Universidad g, EClases clase)
         {
             foreach (Profesor profe in g.Instructores)
             {
@@ -125,17 +129,9 @@ namespace Clases_Instanciables
             }
             throw new SinProfesorException();
         }
-        public static Universidad operator +(Universidad g, Universidad.EClases clase)
+        public static Universidad operator +(Universidad g, EClases clase)
         {
-            Profesor profesor = null;
-            foreach (Profesor profe in g.Instructores)
-            {
-                if (profe == clase)
-                {
-                    profesor = profe;
-                    break;
-                }
-            }
+            Profesor profesor = (g == clase);
             Jornada jornada = new Jornada(clase, profesor);
 
             foreach (Alumno alumno in g.Alumnos)
@@ -175,8 +171,28 @@ namespace Clases_Instanciables
         private static string  MostrarDatos(Universidad uni)
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"");
+            sb.AppendLine("JORNADA:");
+            foreach (Jornada item in uni.jornada)
+            {
+                sb.Append(item.ToString());
+                sb.AppendLine("<---------------------------------------------------->\n");
+            }
             return sb.ToString();
+        }
+        public override string ToString()
+        {
+            return MostrarDatos(this); 
+        }
+        public static bool Guardar(Universidad uni)
+        {
+            Xml<Universidad> xml = new Xml<Universidad>();
+            return xml.Guardar("Universidad.xml", uni);
+        }
+        public static Universidad Leer()
+        {
+            Xml<Universidad> xml = new Xml<Universidad>();
+            xml.Leer("Universidad.xml", out Universidad universidad);
+            return universidad;
         }
     }
 }

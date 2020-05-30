@@ -10,13 +10,7 @@ namespace VistaConsola
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            for (int i = 0; i < 20; i++)
-            {
-                Console.WriteLine("{0}", random.Next(0, 4));
-            }
-
-            Console.ReadKey();
+            
         }
     }
 }

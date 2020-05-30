@@ -1,0 +1,16 @@
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\ProyectoConsola.exe.config
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\ProyectoConsola.exe
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\ProyectoConsola.pdb
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\Archivos.dll
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\Clases Instanciables.dll
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\Entidades_TP3.dll
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\Excepciones.dll
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\Archivos.pdb
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\Entidades_TP3.pdb
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\Clases Instanciables.pdb
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\bin\Debug\Excepciones.pdb
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\obj\Debug\ProyectoConsola.csprojAssemblyReference.cache
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\obj\Debug\ProyectoConsola.csproj.CoreCompileInputs.cache
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\obj\Debug\ProyectoConsola.csproj.CopyComplete
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\obj\Debug\ProyectoConsola.exe
+C:\Users\alnil\OneDrive\Documentos\tps_laboratorio_II\Rolon.Fabian.2C.TP3\ProyectoConsola\obj\Debug\ProyectoConsola.pdb

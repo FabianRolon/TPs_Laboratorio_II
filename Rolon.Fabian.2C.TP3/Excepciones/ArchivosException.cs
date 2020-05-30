@@ -9,7 +9,7 @@ namespace Excepciones
     public class ArchivosException : Exception
     {
         public ArchivosException(Exception innerException)
-            :base("",innerException)
+            :base("Error de archivos", innerException)
         {
 
         }

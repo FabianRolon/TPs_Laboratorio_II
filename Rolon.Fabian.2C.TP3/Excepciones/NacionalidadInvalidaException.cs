@@ -9,6 +9,7 @@ namespace Excepciones
     public class NacionalidadInvalidaException : Exception
     {
         public NacionalidadInvalidaException()
+            :base("La nacionalidadno no se condice con el número de DNI")
         {
 
         }

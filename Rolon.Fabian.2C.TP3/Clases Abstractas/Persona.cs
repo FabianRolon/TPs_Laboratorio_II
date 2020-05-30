@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Excepciones;
 
 namespace EntidadesAbstractas
 {
@@ -49,7 +50,10 @@ namespace EntidadesAbstractas
             }
             set
             {
-                this.apellido = value;
+                if (ValidarNombreApellido(value) != String.Empty)
+                {
+                    this.apellido = value;
+                }
             }
         }
 
@@ -61,11 +65,11 @@ namespace EntidadesAbstractas
             }
             set
             {
-                this.dni = value;
+                this.dni = ValidarDni(this.Nacionalidad, value);
             }
         }
 
-        public ENacionalidad Naciolidad
+        public ENacionalidad Nacionalidad
         {
             get
             {
@@ -85,44 +89,67 @@ namespace EntidadesAbstractas
             }
             set
             {
-                this.nombre = value;
+                if (ValidarNombreApellido(value) != String.Empty)
+                {
+                    this.nombre = value;
+                }
             }
         }
 
         public string StringtoDNI
         {
-            get
-            {
-                return this.dni.ToString();
-            }
             set
             {
-                this.dni = int.Parse(value);
+                this.dni = ValidarDni(this.Nacionalidad, value);
             }
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Nombre: {this.Nombre}");
-            sb.AppendLine($"Apellido: {this.Apellido}");
+            sb.Append($"NOMBRE COMPLETO {this.Apellido},");
+            sb.AppendLine($"{this.Nombre}");         
             sb.AppendLine($"DNI: {this.DNI}");
-            sb.AppendLine($"Nacionalidad: {this.Naciolidad}");
+            sb.AppendLine($"Nacionalidad: {this.Nacionalidad}");
             return sb.ToString();
         }
-
+        private string ValidarNombreApellido(string dato)
+        {
+            foreach (char item in dato)
+            {
+                if (!Char.IsLetter(item) || Char.IsWhiteSpace(item))
+                {
+                    return String.Empty;
+                }
+            }
+            return dato;
+        }
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
-            if(nacionalidad == ENacionalidad.Argentino && dato < 89999999 && dato >1)
+            if (nacionalidad == ENacionalidad.Argentino && dato >= 1 && dato <= 89999999)
             {
                 return dato;
             }
-            return 1;
+            else if (nacionalidad == ENacionalidad.Extranjero && dato >= 90000000 && dato <= 99999999)
+            {
+                return dato;
+            }
+            else
+            {
+                throw new NacionalidadInvalidaException();
+            }
         }
 
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
-            return 1;
+            if (int.TryParse(dato, out int dni))
+            {
+                return ValidarDni(nacionalidad, dni);
+            }
+            else
+            {
+                throw new DniInvalidoException();
+            }
         }
     }
 }
