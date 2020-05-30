@@ -10,6 +10,13 @@ namespace Clases_Instanciables
 {
     public class Universidad
     {
+        public enum EClases
+        {
+            Programacion,
+            Laboratorio,
+            Legislacion,
+            SPD
+        }
         private List<Alumno> alumnos;
         private List<Profesor> profesores;
         private List<Jornada> jornada;
@@ -66,11 +73,11 @@ namespace Clases_Instanciables
         }
         #endregion
         #region Operadores
-        public static bool operator==(Universidad g, Alumno a)
+        public static bool operator ==(Universidad g, Alumno a)
         {
             foreach (Alumno alumno in g.Alumnos)
             {
-                if(alumno == a)
+                if (alumno == a)
                 {
                     return true;
                 }
@@ -96,7 +103,7 @@ namespace Clases_Instanciables
         {
             return !(g == i);
         }
-        public static Profesor operator ==(Universidad g, Eclase clase)
+        public static Profesor operator ==(Universidad g, Universidad.EClases clase)
         {
             foreach (Profesor profe in g.Instructores)
             {
@@ -107,7 +114,7 @@ namespace Clases_Instanciables
             }
             throw new SinProfesorException();
         }
-        public static Profesor operator !=(Universidad g, Eclase clase)
+        public static Profesor operator !=(Universidad g, Universidad.EClases clase)
         {
             foreach (Profesor profe in g.Instructores)
             {
@@ -118,22 +125,22 @@ namespace Clases_Instanciables
             }
             throw new SinProfesorException();
         }
-        public static Universidad operator +(Universidad g, Eclase clase)
+        public static Universidad operator +(Universidad g, Universidad.EClases clase)
         {
             Profesor profesor = null;
             foreach (Profesor profe in g.Instructores)
             {
-                if(profe == clase)
+                if (profe == clase)
                 {
                     profesor = profe;
                     break;
                 }
             }
             Jornada jornada = new Jornada(clase, profesor);
-            
+
             foreach (Alumno alumno in g.Alumnos)
             {
-                if(alumno == clase)
+                if (alumno == clase)
                 {
                     jornada.Alumnos.Add(alumno);
                 }
@@ -156,16 +163,23 @@ namespace Clases_Instanciables
         {
             foreach (Alumno alumno in g.Alumnos)
             {
+
                 if (alumno == a)
-                    return g;
+                    throw new AlumnoRepetidoException();
             }
             g.Alumnos.Add(a);
             return g;
         }
-
         #endregion
+
+        private static string  MostrarDatos(Universidad uni)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"");
+            return sb.ToString();
+        }
     }
 }
 
-        
+
 

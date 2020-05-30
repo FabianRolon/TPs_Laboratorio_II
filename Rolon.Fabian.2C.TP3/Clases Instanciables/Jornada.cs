@@ -9,14 +9,14 @@ namespace Clases_Instanciables
     public class Jornada
     {
         private List<Alumno> alumnos;
-        private Eclase clase;
+        private Universidad.EClases clase;
         private Profesor instructor;
 
         private Jornada()
         {
             alumnos = new List<Alumno>();
         }
-        public Jornada(Eclase clase, Profesor instructor)
+        public Jornada(Universidad.EClases clase, Profesor instructor)
         {
             this.clase = clase;
             this.instructor = instructor;
@@ -34,7 +34,7 @@ namespace Clases_Instanciables
             }
         }
 
-        public Eclase Clase
+        public Universidad.EClases Clase
         {
             get
             {

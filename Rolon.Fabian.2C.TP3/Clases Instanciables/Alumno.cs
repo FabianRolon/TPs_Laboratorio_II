@@ -3,40 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Clases_Abstractas;
+using EntidadesAbstractas;
 
 namespace Clases_Instanciables
 {
-    public enum Eclase
-    {
-        Programacion,
-        Laboratorio,
-        Legislacion,
-        SPD
-    }
-
     public sealed class Alumno : Universitario
     {
-        public enum EEstadoDeCuenta
+        public enum EEstadoCuenta
         {
             AlDia,
             Deudor,
             Becado
         }
 
-        private Eclase claseQueToma;
-        private EEstadoDeCuenta estadoCuenta;
+        private Universidad.EClases claseQueToma;
+        private EEstadoCuenta estadoCuenta;
 
         public Alumno()
         {
 
         }
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Eclase claseQueToma)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma)
             :base(id, nombre, apellido, dni, nacionalidad)
         {
             this.claseQueToma = claseQueToma;
         }
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Eclase claseQueToma, EEstadoDeCuenta estadoCuenta)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta)
             :this(id, nombre, apellido, dni, nacionalidad, claseQueToma)
         {
             this.estadoCuenta = estadoCuenta;
@@ -61,12 +53,12 @@ namespace Clases_Instanciables
             return this.MostrarDatos();
         }
 
-        public static bool operator ==(Alumno a, Eclase clase)
+        public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
-            return clase == a.claseQueToma && a.estadoCuenta != EEstadoDeCuenta.Deudor;
+            return clase == a.claseQueToma && a.estadoCuenta != EEstadoCuenta.Deudor;
         }
 
-        public static bool operator !=(Alumno a, Eclase clase)
+        public static bool operator !=(Alumno a, Universidad.EClases clase)
         {
             return clase == a.claseQueToma;
         }
