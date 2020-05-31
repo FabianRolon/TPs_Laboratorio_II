@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using EntidadesAbstractas;
 
 namespace Clases_Instanciables
-{
+{   /// <summary>
+    /// Clase sellada para definir los datoa de un Alumno universitario
+    /// </summary>
     public sealed class Alumno : Universitario
     {
         #region Atributos y enumerados

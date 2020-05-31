@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Excepciones
 {
+    /// <summary>
+    /// Excepcion para el caso que haya alumnos repetidos.
+    /// </summary>
     public class AlumnoRepetidoException : Exception
     {
         public AlumnoRepetidoException()

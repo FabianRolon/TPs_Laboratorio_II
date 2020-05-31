@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Excepciones
 {
+    /// <summary>
+    /// Excepcion para controlar los casos en que se ingrese algun DNI invalido.
+    /// </summary>
     public class DniInvalidoException : Exception
     {
         public DniInvalidoException()

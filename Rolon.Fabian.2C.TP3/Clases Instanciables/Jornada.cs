@@ -12,12 +12,16 @@ namespace Clases_Instanciables
     /// </summary>
     public class Jornada
     {
+        #region Atributos
         private List<Alumno> alumnos;
         private Universidad.EClases clase;
         private Profesor instructor;
+        #endregion
+        #region Constructores
         /// <summary>
         /// Instancia una Jornada, inicializando la lista de Alumnos.
         /// </summary>
+
         private Jornada()
         {
             alumnos = new List<Alumno>();
@@ -33,7 +37,8 @@ namespace Clases_Instanciables
             this.clase = clase;
             this.instructor = instructor;
         }
-        
+        #endregion
+        #region Propiedades
         public List<Alumno> Alumnos
         {
             get
@@ -67,6 +72,8 @@ namespace Clases_Instanciables
                 this.instructor = value;
             }
         }
+        #endregion
+        #region Metodos y sobrecargas de operadoes
         /// <summary>
         /// Una Jornada será igual a un Alumno si el mismo participa de la clase.
         /// </summary>
@@ -87,6 +94,12 @@ namespace Clases_Instanciables
         {
             return !(j == a);
         }
+        /// <summary>
+        /// Agrega un alumno a la jornada indicada si no se encuentra en la lista.
+        /// </summary>
+        /// <param name="j">Jornada a la cual se le agregará el Alumno.</param>
+        /// <param name="a">Alumno a Agregar.</param>
+        /// <returns>Devuelve la Jornada, ya sea que se le pudo agregar el alumno o no.</returns>
         public static Jornada operator +(Jornada j, Alumno a)
         {
 
@@ -104,6 +117,10 @@ namespace Clases_Instanciables
             }
             return j;
         }
+        /// <summary>
+        /// Devuelve los datos de la jornada.
+        /// </summary>
+        /// <returns>Devuelve los datos de la jornada.</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -126,11 +143,16 @@ namespace Clases_Instanciables
             Texto texto = new Texto();
             return texto.Guardar("Jornada.txt", jornada.ToString());
         }
+        /// <summary>
+        /// Lee la jornada guardada y la devuelve como string.
+        /// </summary>
+        /// <returns>Contenido de la Jornada como String.</returns>
         public static string Leer()
         {
             Texto texto = new Texto();
             texto.Leer("Jornada.txt", out string jornada);
             return jornada;
         }
+        #endregion
     }
 }

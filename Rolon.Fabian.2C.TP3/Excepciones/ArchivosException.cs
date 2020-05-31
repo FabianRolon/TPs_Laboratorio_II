@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Excepciones
 {
+    /// <summary>
+    /// Excepcion para controlar los errores de archivos.
+    /// </summary>
     public class ArchivosException : Exception
     {
         public ArchivosException(Exception innerException)

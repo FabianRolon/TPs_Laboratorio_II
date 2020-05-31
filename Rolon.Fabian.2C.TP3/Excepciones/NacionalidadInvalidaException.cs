@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Excepciones
 {
+    /// <summary>
+    /// Excepcion para controlar los casos en que no coincida el dni con una nacionalidad.
+    /// </summary>
     public class NacionalidadInvalidaException : Exception
     {
         public NacionalidadInvalidaException()
