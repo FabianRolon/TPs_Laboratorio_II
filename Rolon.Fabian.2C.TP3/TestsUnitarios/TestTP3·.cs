@@ -8,6 +8,9 @@ namespace TestsUnitarios
     [TestClass]
     public class TestTP3
     {
+        /// <summary>
+        /// Metod que testea que lance la excepcion correcta al querer añadir un alumno repetido
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(AlumnoRepetidoException))]
         public void AlumnoRepetido()
@@ -22,6 +25,9 @@ namespace TestsUnitarios
             uni += a1;
             uni += a2;  
         }
+        /// <summary>
+        /// Metodo que testea que al ingresar un dni invalido lance la excepcion correcta
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(DniInvalidoException))]
         public void DniInvalido()
@@ -30,6 +36,9 @@ namespace TestsUnitarios
             EntidadesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Laboratorio,
             Alumno.EEstadoCuenta.Deudor);
         }
+        /// <summary>
+        /// Metodo que testea que al no coincidir el dni con la nacionalidad lance una excepcion
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(NacionalidadInvalidaException))]
         public void NacionalidadInvalida()
@@ -38,6 +47,9 @@ namespace TestsUnitarios
             EntidadesAbstractas.Persona.ENacionalidad.Extranjero, Universidad.EClases.Laboratorio,
             Alumno.EEstadoCuenta.Deudor);
         }
+        /// <summary>
+        /// Metodo que testea que las listas se inicialicen correctamente en la clase Universidad
+        /// </summary>
         [TestMethod]
         public void ListasUniversidadNoNull()
         {

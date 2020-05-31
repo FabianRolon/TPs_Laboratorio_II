@@ -7,21 +7,33 @@ using Archivos;
 
 namespace Clases_Instanciables
 {
+    /// <summary>
+    /// Clase para definir Jornadas universitarias, con su clase, profesor y lista de alumnos inscriptos. 
+    /// </summary>
     public class Jornada
     {
         private List<Alumno> alumnos;
         private Universidad.EClases clase;
         private Profesor instructor;
+        /// <summary>
+        /// Instancia una Jornada, inicializando la lista de Alumnos.
+        /// </summary>
         private Jornada()
         {
             alumnos = new List<Alumno>();
         }
+        /// <summary>
+        /// Instancia una jornada con su clase y profesor.
+        /// </summary>
+        /// <param name="clase">Clase que se dará en la Jornada</param>
+        /// <param name="instructor"></param>
         public Jornada(Universidad.EClases clase, Profesor instructor)
             :this()
         {
             this.clase = clase;
             this.instructor = instructor;
         }
+        
         public List<Alumno> Alumnos
         {
             get
@@ -55,10 +67,22 @@ namespace Clases_Instanciables
                 this.instructor = value;
             }
         }
+        /// <summary>
+        /// Una Jornada será igual a un Alumno si el mismo participa de la clase.
+        /// </summary>
+        /// <param name="j">Jornada a Comparar</param>
+        /// <param name="a">Alumno a comparar</param>
+        /// <returns>Devuelve true si el alumno toma la clase, si no devuelve false.</returns>
         public static bool operator ==(Jornada j, Alumno a)
         {
             return a == j.clase;
         }
+        /// <summary>
+        /// Una Jornada será distinto a un Alumno si el mismo no participa de la clase.
+        /// </summary>
+        /// <param name="j">Jornada a Comparar</param>
+        /// <param name="a">Alumno a comparar</param>
+        /// <returns>Devuelve true si el alumno no toma la clase, si no devuelve false.</returns>
         public static bool operator !=(Jornada j, Alumno a)
         {
             return !(j == a);
@@ -92,6 +116,11 @@ namespace Clases_Instanciables
             }
             return sb.ToString(); 
         }
+        /// <summary>
+        /// Guarda una jornada en un archivo de texto.
+        /// </summary>
+        /// <param name="jornada">Jornada a guardar en el archivo</param>
+        /// <returns>Devuelve true si la Jornada fue guardada, o lanza ArchivosException si no se pudo.</returns>
         public static bool Guardar(Jornada jornada)
         {
             Texto texto = new Texto();
