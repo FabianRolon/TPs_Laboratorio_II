@@ -21,7 +21,9 @@ namespace Clases_Instanciables
         public Profesor()
             :base()
         {
-           
+            claseDelDia = new Queue<Universidad.EClases>();
+            _randomClases();
+            _randomClases();
         }
         /// <summary>
         /// Constructor estatico que inicializa el Random.

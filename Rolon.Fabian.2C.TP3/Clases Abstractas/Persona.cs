@@ -71,6 +71,17 @@ namespace EntidadesAbstractas
         }
         #endregion
         #region Propiedades
+        public ENacionalidad Nacionalidad
+        {
+            get
+            {
+                return this.nacionalidad;
+            }
+            set
+            {
+                this.nacionalidad = value;
+            }
+        }
         public string Apellido
         {
             get
@@ -95,18 +106,6 @@ namespace EntidadesAbstractas
             set
             {
                 this.dni = ValidarDni(this.Nacionalidad, value);
-            }
-        }
-
-        public ENacionalidad Nacionalidad
-        {
-            get
-            {
-                return this.nacionalidad;
-            }
-            set
-            {
-                this.nacionalidad = value;
             }
         }
 
